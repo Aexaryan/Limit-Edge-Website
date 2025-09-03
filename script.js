@@ -337,19 +337,19 @@ function initializeGalleryFiltering() {
     });
 }
 
-// Coin hover effects for sponsorship tiers
-function initializeCoinInteractions() {
-    const coins = document.querySelectorAll('.coin');
+// Professional tier visual interactions
+function initializeTierInteractions() {
+    const tierCards = document.querySelectorAll('.tier-card');
     
-    coins.forEach(coin => {
-        coin.addEventListener('mouseenter', () => {
-            coin.style.animationPlayState = 'paused';
-            coin.style.transform = 'scale(1.1) rotateY(180deg)';
+    tierCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
+            card.style.boxShadow = '0 20px 40px rgba(188, 58, 17, 0.15)';
         });
         
-        coin.addEventListener('mouseleave', () => {
-            coin.style.animationPlayState = 'running';
-            coin.style.transform = 'scale(1) rotateY(0deg)';
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = '0 10px 30px rgba(188, 58, 17, 0.1)';
         });
     });
 }
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeMobileNavigation();
     initializeSmoothScrolling();
     initializeGalleryFiltering();
-    initializeCoinInteractions();
+    initializeTierInteractions();
     addGalleryAnimations();
     
     // Initialize countdown
@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('✨ All features initialized successfully!');
     console.log('🎯 Bilingual support: English & Persian');
-    console.log('🪙 3D Coin animations with hover effects');
+    console.log('💎 Professional tier visual elements with hover effects');
     console.log('📧 Email functionality: Applications sent to limitedgeshow@gmail.com');
 });
 

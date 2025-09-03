@@ -899,14 +899,96 @@ p {
     font-size: 1.1rem;
 }
 
-.tier-coin {
+/* Professional Tier Visual Elements */
+.tier-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    border-radius: 20px;
+    border: 1px solid rgba(188, 58, 17, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.tier-value-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #bc3a11, #bc1111);
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(188, 58, 17, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tier-value-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(188, 58, 17, 0.4);
+}
+
+.value-amount {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.value-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tier-benefits-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.benefit-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    border: 1px solid rgba(188, 58, 17, 0.1);
+    transition: all 0.3s ease;
+}
+
+.benefit-preview-item:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(188, 58, 17, 0.3);
+    transform: translateX(5px);
+}
+
+.benefit-preview-item i {
+    color: #bc3a11;
+    font-size: 1.1rem;
+    width: 20px;
     text-align: center;
 }
 
-.tier-coin .coin {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
+.benefit-preview-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2d1b1b;
+}
+
+/* RTL Support for Persian */
+body[data-lang="fa"] .benefit-preview-item:hover {
+    transform: translateX(-5px);
+}
+
+body[data-lang="fa"] .benefit-preview-item {
+    flex-direction: row-reverse;
+    text-align: right;
 }
 
 /* Current Partners Showcase */
@@ -2367,5 +2449,61 @@ body[data-lang="fa"] .nav-menu a:last-child {
     
     .host-message blockquote {
         font-size: 1.1rem;
+    }
+}
+
+/* Mobile Responsive for Tier Visual Elements */
+@media (max-width: 768px) {
+    .tier-visual {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .tier-value-badge {
+        padding: 0.75rem 1.25rem;
+    }
+    
+    .value-amount {
+        font-size: 1.5rem;
+    }
+    
+    .value-label {
+        font-size: 0.75rem;
+    }
+    
+    .tier-benefits-preview {
+        gap: 0.5rem;
+    }
+    
+    .benefit-preview-item {
+        padding: 0.5rem 0.75rem;
+        gap: 0.5rem;
+    }
+    
+    .benefit-preview-item span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+    .tier-visual {
+        padding: 0.75rem;
+    }
+    
+    .tier-value-badge {
+        padding: 0.5rem 1rem;
+    }
+    
+    .value-amount {
+        font-size: 1.3rem;
+    }
+    
+    .benefit-preview-item {
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .benefit-preview-item span {
+        font-size: 0.75rem;
     }
 }
