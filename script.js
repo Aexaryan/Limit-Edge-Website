@@ -213,9 +213,9 @@ async function sendEmail(emailData) {
     }
     
     // EmailJS configuration
-    const serviceID = 'YOUR_EMAILJS_SERVICE_ID'; // You'll get this from EmailJS
-    const templateID = 'YOUR_EMAILJS_TEMPLATE_ID'; // You'll get this from EmailJS
-    const userID = 'YOUR_EMAILJS_USER_ID'; // You'll get this from EmailJS
+    const serviceID = 'service_5dx5or8'; // Replace with your Service ID
+    const templateID = 'template_7ruvkvz'; // Replace with your Template ID
+    const userID = 'czysmMiEJ6mhsBgIR'; // Replace with your User ID
     
     // Send email using EmailJS template
     return emailjs.send(serviceID, templateID, {
