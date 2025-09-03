@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limit Edge - The Ultimate Fitness Challenge Show | مرز توان - نمایش چالش تناسب اندام</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- EmailJS for form submissions -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your actual EmailJS User ID
+        })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="LIMIT EDGE" data-fa="مرز توان">LIMIT EDGE</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-en="Home" data-fa="خانه">Home</a></li>
+                <li><a href="#about" data-en="About" data-fa="درباره">About</a></li>
+                <li><a href="#host" data-en="Host" data-fa="میزبان">Host</a></li>
+                <li><a href="#challenges" data-en="Challenges" data-fa="چالش‌ها">Challenges</a></li>
+                <li><a href="#sponsors" data-en="Sponsors" data-fa="حامیان">Sponsors</a></li>
+                <li><a href="#apply" data-en="Apply" data-fa="درخواست">Apply</a></li>
+                <li><a href="#news" data-en="News" data-fa="اخبار">News</a></li>
+                <li><a href="#media" data-en="Media" data-fa="رسانه">Media</a></li>
+                <li><a href="#contact" data-en="Contact" data-fa="تماس">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="fa">فا</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-en="The Ultimate Fitness Challenge Show" data-fa="نمایش نهایی چالش تناسب اندام">The Ultimate Fitness Challenge Show</h1>
+                <h2 class="hero-subtitle" data-en="Limit Edge" data-fa="مرز توان">Limit Edge</h2>
+                <p class="hero-description" data-en="10 athletes. Endless challenges. One winner." data-fa="۱۰ ورزشکار. چالش‌های بی‌پایان. یک برنده.">10 athletes. Endless challenges. One winner.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" data-en="Apply Now" data-fa="درخواست کنید">Apply Now</button>
+                    <button class="btn btn-secondary" data-en="Watch Teaser" data-fa="مشاهده تیزر">Watch Teaser</button>
+                </div>
+            </div>
+            <div class="hero-video">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p data-en="Teaser Video" data-fa="ویدیوی تیزر">Teaser Video</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Selling Points -->
+    <section class="highlights">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-mountain"></i>
+                    <h3 data-en="Real Endurance & Strength" data-fa="استقامت و قدرت واقعی">Real Endurance & Strength</h3>
+                    <p data-en="Authentic challenges that test true athletic ability" data-fa="چالش‌های اصیل که توانایی ورزشی واقعی را آزمایش می‌کنند">Authentic challenges that test true athletic ability</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-users"></i>
+                    <h3 data-en="Elite Athletes" data-fa="ورزشکاران نخبه">Elite Athletes</h3>
+                    <p data-en="Professional athletes & everyday heroes competing" data-fa="ورزشکاران حرفه‌ای و قهرمانان روزمره در حال رقابت">Professional athletes & everyday heroes competing</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-camera"></i>
+                    <h3 data-en="Nature + Gym" data-fa="طبیعت + باشگاه">Nature + Gym</h3>
+                    <p data-en="Shot in nature & state-of-the-art facilities" data-fa="فیلمبرداری در طبیعت و امکانات پیشرفته">Shot in nature & state-of-the-art facilities</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3 data-en="Sponsorship Opportunities" data-fa="فرصت‌های حمایت">Sponsorship Opportunities</h3>
+                    <p data-en="Exclusive brand integration & exposure" data-fa="ادغام انحصاری برند و نمایش">Exclusive brand integration & exposure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Sponsors -->
+    <section class="sponsors-preview">
+        <div class="container">
+            <h2 data-en="Featured Partners" data-fa="شرکای ویژه">Featured Partners</h2>
+            <div class="sponsors-carousel">
+                <div class="sponsor-logo">SPONSOR 1</div>
+                <div class="sponsor-logo">SPONSOR 2</div>
+                <div class="sponsor-logo">SPONSOR 3</div>
+                <div class="sponsor-logo">SPONSOR 4</div>
+                <div class="sponsor-logo">SPONSOR 5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown">
+        <div class="container">
+            <h2 data-en="Countdown to Pilot Launch" data-fa="شمارش معکوس تا راه‌اندازی آزمایشی">Countdown to Pilot Launch</h2>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <span class="number" id="days">00</span>
+                    <span class="label" data-en="Days" data-fa="روز">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number" id="hours">00</span>
+                    <span class="label" data-en="Hours" data-fa="ساعت">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label" data-en="Minutes" data-fa="دقیقه">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label" data-en="Seconds" data-fa="ثانیه">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Show -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-en="About the Show" data-fa="درباره نمایش">About the Show</h2>
+                    <p class="about-description" data-en="Limit Edge is a groundbreaking fitness competition that pushes athletes to their absolute limits through a series of intense challenges designed to test both physical and mental endurance." data-fa="مرز توان یک رقابت تناسب اندام انقلابی است که ورزشکاران را از طریق مجموعه‌ای از چالش‌های شدید که برای آزمایش استقامت جسمی و ذهنی طراحی شده‌اند، به حد نهایی خود می‌رساند.">Limit Edge is a groundbreaking fitness competition that pushes athletes to their absolute limits through a series of intense challenges designed to test both physical and mental endurance.</p>
+                    <div class="mission">
+                        <h3 data-en="Our Mission" data-fa="ماموریت ما">Our Mission</h3>
+                        <p data-en="&quot;To inspire strength, endurance, and unity through competition.&quot;" data-fa="&quot;الهام بخشیدن به قدرت، استقامت و وحدت از طریق رقابت.&quot;">"To inspire strength, endurance, and unity through competition."</p>
+                    </div>
+                    <div class="unique-features">
+                        <h3 data-en="What Makes Us Unique" data-fa="آنچه ما را منحصر به فرد می‌کند">What Makes Us Unique</h3>
+                        <ul>
+                            <li data-en="Outdoor + indoor challenges" data-fa="چالش‌های بیرونی + درونی">Outdoor + indoor challenges</li>
+                            <li data-en="Equal male/female competitors" data-fa="رقبای برابر مرد/زن">Equal male/female competitors</li>
+                            <li data-en="Mental + physical endurance tests" data-fa="آزمون‌های استقامت ذهنی + جسمی">Mental + physical endurance tests</li>
+                            <li data-en="Real-time audience engagement" data-fa="تعامل مخاطب در زمان واقعی">Real-time audience engagement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host Section -->
+    <section id="host" class="host">
+        <div class="container">
+            <h2 data-en="Meet Your Host" data-fa="میزبان خود را ملاقات کنید">Meet Your Host</h2>
+            <div class="host-content">
+                <div class="host-image">
+                    <img src="Reza_Madaddi.jpg" alt="Reza Madaddi - Limit Edge Host" class="host-photo">
+                </div>
+                <div class="host-info">
+                    <h3 data-en="Reza Madaddi" data-fa="رضا مددی">Reza Madaddi</h3>
+                    <p class="host-title" data-en="Fitness Expert & Show Host" data-fa="متخصص تناسب اندام و میزبان نمایش">Fitness Expert & Show Host</p>
+                    <p class="host-description" data-en="Reza Madaddi is a renowned fitness expert, motivational speaker, and the charismatic host of Limit Edge. With over 15 years of experience in the fitness industry, Reza has dedicated his life to helping people push beyond their perceived limitations and discover their true potential." data-fa="رضا مددی یک متخصص تناسب اندام مشهور، سخنران انگیزشی و میزبان کاریزماتیک لیمیت اج است. با بیش از ۱۵ سال تجربه در صنعت تناسب اندام، رضا زندگی خود را وقف کمک به مردم برای عبور از محدودیت‌های درک شده خود و کشف پتانسیل واقعی خود کرده است.">Reza Madaddi is a renowned fitness expert, motivational speaker, and the charismatic host of Limit Edge. With over 15 years of experience in the fitness industry, Reza has dedicated his life to helping people push beyond their perceived limitations and discover their true potential.</p>
+                    <div class="host-qualities">
+                        <div class="quality-item">
+                            <i class="fas fa-fire"></i>
+                            <span data-en="Passionate Motivator" data-fa="انگیزه‌دهنده پرشور">Passionate Motivator</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-brain"></i>
+                            <span data-en="Mental Strength Coach" data-fa="مربی قدرت ذهنی">Mental Strength Coach</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-users"></i>
+                            <span data-en="Team Builder" data-fa="سازنده تیم">Team Builder</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-trophy"></i>
+                            <span data-en="Champion Mindset" data-fa="ذهنیت قهرمان">Champion Mindset</span>
+                        </div>
+                    </div>
+                    <div class="host-message">
+                        <blockquote data-en="'Every challenge is an opportunity to discover what you're truly capable of. The limits you think you have are just the beginning of your potential.'" data-fa="'هر چالشی فرصتی برای کشف آنچه واقعاً قادر به انجام آن هستید است. محدودیت‌هایی که فکر می‌کنید دارید فقط شروع پتانسیل شما هستند.'">"Every challenge is an opportunity to discover what you're truly capable of. The limits you think you have are just the beginning of your potential."</blockquote>
+                        <cite>- Reza Madaddi</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges -->
+    <section id="challenges" class="challenges">
+        <div class="container">
+            <h2 data-en="Challenges" data-fa="چالش‌ها">Challenges</h2>
+            <p class="section-intro" data-en="A mix of endurance, speed, and strength challenges." data-fa="ترکیبی از چالش‌های استقامت، سرعت و قدرت.">A mix of endurance, speed, and strength challenges.</p>
+            <div class="challenges-grid">
+                <div class="challenge-category">
+                    <div class="challenge-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 data-en="Endurance" data-fa="استقامت">Endurance</h3>
+                    <p data-en="Long-distance runs, obstacle courses, and stamina tests that push athletes to their breaking point." data-fa="دویدن‌های طولانی، دوره‌های مانع و آزمون‌های استقامت که ورزشکاران را تا نقطه شکست تحت فشار قرار می‌دهند.">Long-distance runs, obstacle courses, and stamina tests that push athletes to their breaking point.</p>
+                </div>
+                <div class="challenge-category">
+                    <div class="challenge-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 data-en="Speed" data-fa="سرعت">Speed</h3>
+                    <p data-en="Sprints, reaction challenges, and agility tests that demand lightning-fast reflexes and explosive power." data-fa="اسپرینت‌ها، چالش‌های واکنش و آزمون‌های چابکی که نیاز به رفلکس‌های سریع و قدرت انفجاری دارند.">Sprints, reaction challenges, and agility tests that demand lightning-fast reflexes and explosive power.</p>
+                </div>
+                <div class="challenge-category">
+                    <div class="challenge-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 data-en="Strength" data-fa="قدرت">Strength</h3>
+                    <p data-en="Weightlifting, power-based tests, and brute force challenges that separate the strong from the strongest." data-fa="وزنه‌برداری، آزمون‌های مبتنی بر قدرت و چالش‌های نیروی خام که قوی‌ها را از قوی‌ترین‌ها جدا می‌کند.">Weightlifting, power-based tests, and brute force challenges that separate the strong from the strongest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors & Partners -->
+    <section id="sponsors" class="sponsors">
+        <div class="container">
+            <h2 data-en="Sponsors & Partners" data-fa="حامیان و شرکا">Sponsors & Partners</h2>
+            <div class="sponsors-content">
+                <div class="sponsors-text">
+                    <h3 data-en="Why Partner With Us" data-fa="چرا با ما همکاری کنید">Why Partner With Us</h3>
+                    <ul>
+                        <li data-en="National TV exposure" data-fa="نمایش تلویزیونی ملی">National TV exposure</li>
+                        <li data-en="Association with health, fitness, resilience" data-fa="ارتباط با سلامتی، تناسب اندام و انعطاف‌پذیری">Association with health, fitness, resilience</li>
+                        <li data-en="Social media integration" data-fa="ادغام رسانه‌های اجتماعی">Social media integration</li>
+                        <li data-en="Direct athlete endorsements" data-fa="تأییدیه‌های مستقیم ورزشکاران">Direct athlete endorsements</li>
+                    </ul>
+                </div>
+                <div class="sponsorship-tiers">
+                    <h3 data-en="Sponsorship Tiers" data-fa="سطوح حمایت">Sponsorship Tiers</h3>
+                    <div class="tier-container">
+                        <div class="tier-card">
+                            <div class="tier-content">
+                                <h4 data-en="Gold" data-fa="طلایی">Gold</h4>
+                                <p data-en="Premium placement, exclusive content, athlete partnerships" data-fa="جایگاه ویژه، محتوای انحصاری، مشارکت ورزشکاران">Premium placement, exclusive content, athlete partnerships</p>
+                            </div>
+                            <div class="coin gold-coin">
+                                <div class="coin-front">
+                                    <span class="coin-value">$50K</span>
+                                </div>
+                                <div class="coin-back"></div>
+                            </div>
+                        </div>
+                        <div class="tier-card">
+                            <div class="tier-content">
+                                <h4 data-en="Silver" data-fa="نقره‌ای">Silver</h4>
+                                <p data-en="Featured branding, social media mentions, event presence" data-fa="برندینگ ویژه، ذکر در رسانه‌های اجتماعی، حضور در رویداد">Featured branding, social media mentions, event presence</p>
+                            </div>
+                            <div class="coin silver-coin">
+                                <div class="coin-front">
+                                    <span class="coin-value">$25K</span>
+                                </div>
+                                <div class="coin-back"></div>
+                            </div>
+                        </div>
+                        <div class="tier-card">
+                            <div class="tier-content">
+                                <h4 data-en="Bronze" data-fa="برنزی">Bronze</h4>
+                                <p data-en="Logo placement, basic integration, promotional opportunities" data-fa="جایگذاری لوگو، ادغام پایه، فرصت‌های تبلیغاتی">Logo placement, basic integration, promotional opportunities</p>
+                            </div>
+                            <div class="coin bronze-coin">
+                                <div class="coin-front">
+                                    <span class="coin-value">$10K</span>
+                                </div>
+                                <div class="coin-back"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply / Join -->
+    <section id="apply" class="apply">
+        <div class="container">
+            <h2 data-en="Think You Have What It Takes?" data-fa="فکر می‌کنید اهل چالش هستید؟">Think You Have What It Takes?</h2>
+            <p class="section-intro" data-en="Apply now to join the ultimate fitness challenge." data-fa=" برای پیوستن به چالش درخواست دهید.">Apply now to join the ultimate fitness challenge.</p>
+            <form class="application-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" data-en="Full Name" data-fa="نام کامل">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age" data-en="Age" data-fa="سن">Age</label>
+                        <input type="number" id="age" name="age" min="18" max="65" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender" data-en="Gender" data-fa="جنسیت">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" data-en="Select Gender" data-fa="جنسیت را انتخاب کنید">Select Gender</option>
+                            <option value="male" data-en="Male" data-fa="مرد">Male</option>
+                            <option value="female" data-en="Female" data-fa="زن">Female</option>
+                            <option value="other" data-en="Other" data-fa="سایر">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hometown" data-en="Hometown" data-fa="شهر محل سکونت">Hometown</label>
+                        <input type="text" id="hometown" name="hometown" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="background" data-en="Athletic Background" data-fa="پیشینه ورزشی">Athletic Background</label>
+                    <textarea id="background" name="background" rows="3" data-en-placeholder="Describe your athletic experience, achievements, and training..." data-fa-placeholder="تجربه ورزشی، دستاوردها و تمرینات خود را توصیف کنید..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="motivation" data-en="Why Do You Want to Compete?" data-fa="چرا می‌خواهید رقابت کنید؟">Why Do You Want to Compete?</label>
+                    <textarea id="motivation" name="motivation" rows="3" data-en-placeholder="Tell us what drives you and why you think you can win..." data-fa-placeholder="به ما بگویید چه چیزی شما را هدایت می‌کند و چرا فکر می‌کنید می‌توانید برنده شوید..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instagram" data-en="Instagram Account ID" data-fa="شناسه حساب اینستاگرام">Instagram Account ID</label>
+                    <input type="text" id="instagram" name="instagram" placeholder="@username" required>
+                </div>
+                <div class="form-group">
+                    <label for="youtube" data-en="YouTube Channel (Optional)" data-fa="کانال یوتیوب (اختیاری)">YouTube Channel (Optional)</label>
+                    <input type="text" id="youtube" name="youtube" placeholder="Channel name or URL">
+                </div>
+                <button type="submit" class="btn btn-primary" data-en="Submit Application" data-fa="ارسال درخواست">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- News & Updates -->
+    <section id="news" class="news">
+        <div class="container">
+            <h2 data-en="News & Updates" data-fa="اخبار و به‌روزرسانی‌ها">News & Updates</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">NEWS 1</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 data-en="Training Tips from Our Athletes" data-fa="نکات تمرینی از ورزشکاران ما">Training Tips from Our Athletes</h3>
+                        <p data-en="Get exclusive insights into the training regimens that prepare our competitors for the ultimate challenges." data-fa="بینش‌های انحصاری در مورد رژیم‌های تمرینی که رقبای ما را برای نهایی‌ترین چالش‌ها آماده می‌کنند، دریافت کنید.">Get exclusive insights into the training regimens that prepare our competitors for the ultimate challenges.</p>
+                        <span class="news-date">December 15, 2024</span>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">NEWS 2</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 data-en="Behind the Scenes: Challenge Design" data-fa="پشت صحنه: طراحی چالش">Behind the Scenes: Challenge Design</h3>
+                        <p data-en="Discover how our team creates the most grueling and exciting challenges for the show." data-fa="کشف کنید که چگونه تیم ما سخت‌ترین و هیجان‌انگیزترین چالش‌ها را برای نمایش ایجاد می‌کند.">Discover how our team creates the most grueling and exciting challenges for the show.</p>
+                        <span class="news-date">December 10, 2024</span>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">NEWS 3</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 data-en="New Sponsor Announcement" data-fa="اعلان حامی جدید">New Sponsor Announcement</h3>
+                        <p data-en="We're excited to welcome our newest partner to the Limit Edge family." data-fa="ما هیجان‌زده هستیم که جدیدترین شریک خود را به خانواده لیمیت اج خوش‌آمد بگوییم.">We're excited to welcome our newest partner to the Limit Edge family.</p>
+                        <span class="news-date">December 5, 2024</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery -->
+    <section id="media" class="media">
+        <div class="container">
+            <h2 data-en="Media Gallery" data-fa="گالری رسانه">Media Gallery</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all" data-en="All" data-fa="همه">All</button>
+                <button class="filter-btn" data-filter="behind-scenes" data-en="Behind the Scenes" data-fa="پشت صحنه">Behind the Scenes</button>
+                <button class="filter-btn" data-filter="challenges" data-en="Challenges" data-fa="چالش‌ها">Challenges</button>
+                <button class="filter-btn" data-filter="athletes" data-en="Athletes" data-fa="ورزشکاران">Athletes</button>
+                <button class="filter-btn" data-filter="events" data-en="Events" data-fa="رویدادها">Events</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="behind-scenes">
+                    <div class="image-placeholder">BTS 1</div>
+                </div>
+                <div class="gallery-item" data-category="challenges">
+                    <div class="image-placeholder">CHALLENGE 1</div>
+                </div>
+                <div class="gallery-item" data-category="athletes">
+                    <div class="image-placeholder">ATHLETE 1</div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <div class="image-placeholder">EVENT 1</div>
+                </div>
+                <div class="gallery-item" data-category="behind-scenes">
+                    <div class="image-placeholder">BTS 2</div>
+                </div>
+                <div class="gallery-item" data-category="challenges">
+                    <div class="image-placeholder">CHALLENGE 2</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-en="Contact Us" data-fa="با ما تماس بگیرید">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="contact-name" data-en="Name" data-fa="نام">Name</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" data-en="Email" data-fa="ایمیل">Email</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" data-en="Message" data-fa="پیام">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-en="Send Message" data-fa="ارسال پیام">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3 data-en="Sponsorship Inquiries" data-fa="استعلامات حمایت">Sponsorship Inquiries</h3>
+                        <p>Email: sponsors@limitedge.com</p>
+                        <p>Phone: (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 data-en="Follow Us" data-fa="ما را دنبال کنید">Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-en="LIMIT EDGE" data-fa="مرز توان">LIMIT EDGE</h3>
+                    <p data-en="The Ultimate Fitness Challenge Show" data-fa="نمایش نهایی چالش تناسب اندام">The Ultimate Fitness Challenge Show</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-en="Show" data-fa="نمایش">Show</h4>
+                        <ul>
+                            <li><a href="#about" data-en="About" data-fa="درباره">About</a></li>
+                            <li><a href="#host" data-en="Host" data-fa="میزبان">Host</a></li>
+                            <li><a href="#challenges" data-en="Challenges" data-fa="چالش‌ها">Challenges</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-en="Get Involved" data-fa="مشارکت کنید">Get Involved</h4>
+                        <ul>
+                            <li><a href="#apply" data-en="Apply Now" data-fa="اکنون درخواست دهید">Apply Now</a></li>
+                            <li><a href="#sponsors" data-en="Sponsor" data-fa="حمایت">Sponsor</a></li>
+                            <li><a href="#contact" data-en="Contact" data-fa="تماس">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-en="Media" data-fa="رسانه">Media</h4>
+                        <ul>
+                            <li><a href="#news" data-en="News" data-fa="اخبار">News</a></li>
+                            <li><a href="#media" data-en="Gallery" data-fa="گالری">Gallery</a></li>
+                            <li><a href="#contact" data-en="Press" data-fa="مطبوعات">Press</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Limit Edge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
