@@ -2053,43 +2053,96 @@ body[data-lang="fa"] .nav-menu a:last-child {
         transform: translateY(-3px);
     }
     
-    /* Mobile Responsive Sponsors */
+    /* Persian Mobile Social Media Icons */
     @media (max-width: 768px) {
-        .sponsors-header h2 {
-            font-size: 2.2rem;
+        body[data-lang="fa"] .social-links {
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
         }
         
-        .sponsors-subtitle {
+        body[data-lang="fa"] .social-links a {
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+        }
+        
+        body[data-lang="fa"] .social-links a i {
             font-size: 1.1rem;
         }
-        
-        .benefits-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+    }
+    
+    @media (max-width: 480px) {
+        body[data-lang="fa"] .social-links {
+            gap: 0.6rem;
+            margin-top: 1rem;
         }
         
-        .benefit-card {
-            padding: 2rem 1.5rem;
+        body[data-lang="fa"] .social-links a {
+            width: 35px;
+            height: 35px;
+            padding: 8px;
         }
         
-        .tier-container {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .tier-card {
-            padding: 2rem 1.5rem;
-        }
-        
-        .partners-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .partner-logo {
-            padding: 1.5rem;
+        body[data-lang="fa"] .social-links a i {
+            font-size: 1rem;
         }
     }
+    
+    /* Mobile Responsive Sponsors */
+@media (max-width: 768px) {
+    .sponsors-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .sponsors-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefit-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .tier-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tier-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .partners-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .partner-logo {
+        padding: 1.5rem;
+    }
+    
+    /* General Mobile Social Links */
+    .social-links {
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    
+    .social-links a i {
+        font-size: 1.1rem;
+    }
+}
 }
 
 @media (max-width: 480px) {
@@ -2099,6 +2152,22 @@ body[data-lang="fa"] .nav-menu a:last-child {
     
     .hero-title {
         font-size: 2rem;
+    }
+    
+    /* General Small Mobile Social Links */
+    .social-links {
+        gap: 0.6rem;
+        margin-top: 1rem;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
+    
+    .social-links a i {
+        font-size: 1rem;
     }
     
     /* Persian Small Mobile Optimizations */
