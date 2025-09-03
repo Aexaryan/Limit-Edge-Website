@@ -1694,6 +1694,7 @@ body[data-lang="fa"] .nav-menu a {
         left: auto;
         text-align: right;
         direction: rtl;
+        flex-direction: column;  /* Ensure vertical layout */
     }
     
     body[data-lang="fa"] .nav-menu.active {
@@ -1736,24 +1737,32 @@ body[data-lang="fa"] .nav-menu a {
     body[data-lang="fa"] .nav-menu {
         padding-right: 0;
         padding-left: 0;
+        flex-direction: column;  /* Maintain vertical layout */
     }
     
     body[data-lang="fa"] .nav-menu a {
         border-right: 3px solid transparent;
         border-left: none;
-        padding-right: 2rem;
-        padding-left: 1rem;
+        padding: 1rem 2rem;
+        margin: 0.2rem 0;
+        display: block;
+        width: 100%;
+        text-align: right;
+        border-radius: 0;
+        transition: all 0.3s ease;
     }
     
     body[data-lang="fa"] .nav-menu a:hover {
         border-right-color: #bc3a11;
         background: linear-gradient(90deg, rgba(188, 58, 17, 0.05), transparent);
+        transform: translateX(-5px);
     }
     
     body[data-lang="fa"] .nav-menu a.active {
         border-right-color: #bc3a11;
         color: #bc3a11;
         font-weight: 600;
+        background: rgba(188, 58, 17, 0.1);
     }
     
     /* Persian Mobile Hero */
@@ -2231,28 +2240,29 @@ body[data-lang="fa"] .nav-menu a {
     /* Persian Extra Small Mobile Navigation */
     body[data-lang="fa"] .nav-menu {
         padding: 1.5rem 0;
+        flex-direction: column;  /* Ensure vertical layout on small screens */
     }
     
     body[data-lang="fa"] .nav-menu a {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
+        margin: 0.15rem 0;
+        display: block;
+        width: 100%;
     }
     
     body[data-lang="fa"] .nav-menu a:hover {
         padding-right: 2rem;
+        transform: translateX(-3px);
     }
     
     body[data-lang="fa"] .nav-container {
         padding: 0 15px;
     }
     
-    body[data-lang="fa"] .nav-menu {
-        padding: 1.5rem 0;
-    }
-    
     body[data-lang="fa"] .nav-menu a {
         font-size: 1rem;
-        padding: 0.8rem 0;
+        padding: 0.8rem 1.5rem;
     }
     
     body[data-lang="fa"] .form-group input,
