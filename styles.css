@@ -1689,31 +1689,36 @@ body[data-lang="fa"] .nav-menu a {
     }
     
     /* Persian Mobile Navigation */
-body[data-lang="fa"] .nav-menu {
-    right: -100%;
-    left: auto;
-}
-
-body[data-lang="fa"] .nav-menu.active {
-    right: 0;
-    left: auto;
-}
-
-/* Persian Mobile Touch Optimizations */
-body[data-lang="fa"] .nav-menu a {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(188, 58, 17, 0.1);
-    transition: all 0.3s ease;
-}
-
-body[data-lang="fa"] .nav-menu a:hover {
-    background: rgba(188, 58, 17, 0.05);
-    color: #bc3a11;
-}
-
-body[data-lang="fa"] .nav-menu a:last-child {
-    border-bottom: none;
-}
+    body[data-lang="fa"] .nav-menu {
+        right: -100%;
+        left: auto;
+        text-align: right;
+        direction: rtl;
+    }
+    
+    body[data-lang="fa"] .nav-menu.active {
+        right: 0;
+        left: auto;
+    }
+    
+    /* Persian Mobile Touch Optimizations */
+    body[data-lang="fa"] .nav-menu a {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(188, 58, 17, 0.1);
+        transition: all 0.3s ease;
+        text-align: right;
+        font-size: 1.1rem;
+    }
+    
+    body[data-lang="fa"] .nav-menu a:hover {
+        background: rgba(188, 58, 17, 0.05);
+        color: #bc3a11;
+        padding-right: 2.5rem;
+    }
+    
+    body[data-lang="fa"] .nav-menu a:last-child {
+        border-bottom: none;
+    }
     
     body[data-lang="fa"] .nav-container {
         flex-direction: row-reverse;
@@ -1721,6 +1726,34 @@ body[data-lang="fa"] .nav-menu a:last-child {
     
     body[data-lang="fa"] .hamburger {
         order: -1;
+    }
+    
+    body[data-lang="fa"] .language-switcher {
+        order: 1;
+    }
+    
+    /* Persian Mobile Navigation Improvements */
+    body[data-lang="fa"] .nav-menu {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    body[data-lang="fa"] .nav-menu a {
+        border-right: 3px solid transparent;
+        border-left: none;
+        padding-right: 2rem;
+        padding-left: 1rem;
+    }
+    
+    body[data-lang="fa"] .nav-menu a:hover {
+        border-right-color: #bc3a11;
+        background: linear-gradient(90deg, rgba(188, 58, 17, 0.05), transparent);
+    }
+    
+    body[data-lang="fa"] .nav-menu a.active {
+        border-right-color: #bc3a11;
+        color: #bc3a11;
+        font-weight: 600;
     }
     
     /* Persian Mobile Hero */
@@ -2193,6 +2226,24 @@ body[data-lang="fa"] .nav-menu a:last-child {
     body[data-lang="fa"] .hero-buttons {
         flex-direction: column;
         gap: 0.8rem;
+    }
+    
+    /* Persian Extra Small Mobile Navigation */
+    body[data-lang="fa"] .nav-menu {
+        padding: 1.5rem 0;
+    }
+    
+    body[data-lang="fa"] .nav-menu a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    body[data-lang="fa"] .nav-menu a:hover {
+        padding-right: 2rem;
+    }
+    
+    body[data-lang="fa"] .nav-container {
+        padding: 0 15px;
     }
     
     body[data-lang="fa"] .nav-menu {
