@@ -873,8 +873,20 @@ p {
     margin-bottom: 1rem;
 }
 
+.tier-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.tier-main {
+    display: flex;
+    flex-direction: column;
+}
+
 .tier-features {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .tier-features ul {
@@ -910,6 +922,9 @@ p {
     border-radius: 20px;
     border: 1px solid rgba(188, 58, 17, 0.1);
     backdrop-filter: blur(10px);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
 }
 
 .tier-value-badge {
@@ -982,6 +997,10 @@ p {
 }
 
 /* RTL Support for Persian */
+body[data-lang="fa"] .tier-content {
+    direction: rtl;
+}
+
 body[data-lang="fa"] .benefit-preview-item:hover {
     transform: translateX(-5px);
 }
@@ -2454,9 +2473,16 @@ body[data-lang="fa"] .nav-menu a:last-child {
 
 /* Mobile Responsive for Tier Visual Elements */
 @media (max-width: 768px) {
+    .tier-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .tier-visual {
         padding: 1rem;
         gap: 1rem;
+        position: static;
+        order: -1;
     }
     
     .tier-value-badge {
