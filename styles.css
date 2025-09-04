@@ -2457,7 +2457,7 @@ body[data-lang="fa"] .nav-menu a {
 
 .host-photo {
     width: 100%;
-    max-width: 280px;
+    max-width: 220px;
     height: auto;
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
@@ -2586,7 +2586,7 @@ body[data-lang="fa"] .nav-menu a {
     }
     
     .host-photo {
-        max-width: 220px;
+        max-width: 300px;
     }
 }
 
@@ -2609,10 +2609,6 @@ body[data-lang="fa"] .nav-menu a {
     
     .host-message blockquote {
         font-size: 1.1rem;
-    }
-    
-    .host-photo {
-        max-width: 200px;
     }
 }
 
