@@ -27,8 +27,18 @@ body[data-lang="fa"] .container {
     text-align: right;
 }
 
+/* Persian Desktop Navigation */
 body[data-lang="fa"] .nav-menu {
     flex-direction: row-reverse;
+}
+
+/* Persian Mobile Navigation - Override desktop behavior */
+@media (max-width: 768px) {
+    body[data-lang="fa"] .nav-menu {
+        flex-direction: column;
+        text-align: center;
+        direction: ltr; /* Reset direction for mobile */
+    }
 }
 
 body[data-lang="fa"] .hero {
@@ -1612,11 +1622,29 @@ body[data-lang="fa"] .nav-menu a {
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 1.5rem 0;
+        padding: 1rem 0;
     }
     
     .nav-menu.active {
         left: 0;
+    }
+    
+    .nav-menu a {
+        padding: 0.5rem 2rem;
+        border-bottom: 1px solid rgba(188, 58, 17, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 0.05rem 0;
+    }
+    
+    .nav-menu a:hover {
+        background: rgba(188, 58, 17, 0.05);
+        color: #bc3a11;
+    }
+    
+    .nav-menu a:last-child {
+        border-bottom: none;
     }
     
     .language-switcher {
@@ -1688,80 +1716,63 @@ body[data-lang="fa"] .nav-menu a {
         font-size: 1rem;
     }
     
-    /* Persian Mobile Navigation */
+    /* Persian Mobile Navigation - Unified */
     body[data-lang="fa"] .nav-menu {
-        right: -100%;
-        left: auto;
-        text-align: right;
-        direction: rtl;
-        flex-direction: column;  /* Ensure vertical layout */
+        left: -100%;  /* Use left for consistency */
+        right: auto;
+        text-align: center;
+        direction: ltr;  /* Reset direction for mobile */
+        flex-direction: column;
+        padding: 0.7rem 0;
     }
     
     body[data-lang="fa"] .nav-menu.active {
-        right: 0;
-        left: auto;
+        left: 0;
+        right: auto;
     }
     
-    /* Persian Mobile Touch Optimizations */
     body[data-lang="fa"] .nav-menu a {
-        padding: 1rem 2rem;
         border-bottom: 1px solid rgba(188, 58, 17, 0.1);
-        transition: all 0.3s ease;
-        text-align: right;
+        padding: 0.5rem 2rem;
+        margin: 0.05rem 0;
+        display: block;
+        width: 100%;
+        text-align: center;
         font-size: 1.1rem;
+        transition: all 0.3s ease;
     }
     
     body[data-lang="fa"] .nav-menu a:hover {
         background: rgba(188, 58, 17, 0.05);
         color: #bc3a11;
-        padding-right: 2.5rem;
+        transform: translateY(-2px);
     }
     
     body[data-lang="fa"] .nav-menu a:last-child {
         border-bottom: none;
     }
     
+    /* Persian Mobile Header Layout */
     body[data-lang="fa"] .nav-container {
         flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    body[data-lang="fa"] .nav-logo {
+        order: 2;
     }
     
     body[data-lang="fa"] .hamburger {
-        order: -1;
+        order: 1;
+        margin-left: 0;
+        margin-right: auto;
     }
     
     body[data-lang="fa"] .language-switcher {
-        order: 1;
-    }
-    
-    /* Persian Mobile Navigation Improvements */
-    body[data-lang="fa"] .nav-menu {
-        padding: 1rem 0;
-        flex-direction: column;  /* Maintain vertical layout */
-    }
-    
-    body[data-lang="fa"] .nav-menu a {
-        border-right: 3px solid transparent;
-        border-left: none;
-        padding: 0.7rem 2rem;
-        margin: 0.1rem 0;
-        display: block;
-        width: 100%;
-        text-align: right;
-        border-radius: 0;
-        transition: all 0.3s ease;
-    }
-    
-    body[data-lang="fa"] .nav-menu a:hover {
-        border-right-color: #bc3a11;
-        background: linear-gradient(90deg, rgba(188, 58, 17, 0.05), transparent);
-        transform: translateX(-5px);
-    }
-    
-    body[data-lang="fa"] .nav-menu a.active {
-        border-right-color: #bc3a11;
-        color: #bc3a11;
-        font-weight: 600;
-        background: rgba(188, 58, 17, 0.1);
+        order: 3;
+        margin-right: 0;
+        margin-left: auto;
     }
     
     /* Persian Mobile Hero */
@@ -2237,16 +2248,18 @@ body[data-lang="fa"] .nav-menu a {
     
     /* Persian Extra Small Mobile Navigation */
     body[data-lang="fa"] .nav-menu {
-        padding: 0.8rem 0;
+        padding: 0.5rem 0;
         flex-direction: column;  /* Ensure vertical layout on small screens */
+        text-align: center;
     }
     
     body[data-lang="fa"] .nav-menu a {
-        padding: 0.6rem 1.5rem;
+        padding: 0.4rem 1.5rem;
         font-size: 1rem;
-        margin: 0.08rem 0;
+        margin: 0.03rem 0;
         display: block;
         width: 100%;
+        text-align: center;
     }
     
     body[data-lang="fa"] .nav-menu a:hover {
