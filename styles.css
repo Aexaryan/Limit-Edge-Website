@@ -2399,34 +2399,19 @@ body[data-lang="fa"] .nav-menu a {
     }
 }
 
-/* Additional Mobile Optimizations */
-@media (max-width: 480px) {
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-    }
-    
-    .application-form {
-        padding: 2rem 1.5rem;
-    }
-}
-
-/* Host Section - Updated with New Color Palette */
+/* Host Section - Professional Design Matching Website Style */
 .host {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    background: white;
+    position: relative;
 }
 
 .host h2 {
     text-align: center;
-    margin-bottom: 60px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #bc3a11;
     position: relative;
 }
 
@@ -2438,53 +2423,48 @@ body[data-lang="fa"] .nav-menu a {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: var(--accent-gradient);
+    background: linear-gradient(90deg, #bc3a11, #bc1111);
     border-radius: 2px;
 }
 
 .host-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.host-image {
+.host-photo-container {
     text-align: center;
 }
 
 .host-photo {
     width: 100%;
-    max-width: 220px;
+    max-width: 400px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
-    transition: var(--transition);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
 .host-photo:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-5px);
 }
 
 .host-info h3 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #2d1b1b;
+    margin-bottom: 0.5rem;
 }
 
 .host-title {
     font-size: 1.2rem;
-    color: var(--accent-primary);
+    color: #bc3a11;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -2492,83 +2472,113 @@ body[data-lang="fa"] .nav-menu a {
 .host-description {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 30px;
+    color: #5a4a4a;
+    margin-bottom: 2rem;
 }
 
 .host-qualities {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .quality-item {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 15px;
-    background: rgba(188, 58, 17, 0.05);
-    border-radius: 12px;
-    border: 1px solid rgba(188, 58, 17, 0.1);
-    transition: var(--transition);
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #bc3a11;
+    transition: all 0.3s ease;
 }
 
 .quality-item:hover {
-    background: rgba(188, 58, 17, 0.1);
+    background: rgba(188, 58, 17, 0.05);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent-primary);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .quality-item i {
     font-size: 1.5rem;
-    color: var(--accent-primary);
+    color: #bc3a11;
     width: 30px;
     text-align: center;
 }
 
 .quality-item span {
     font-weight: 600;
-    color: var(--text-primary);
+    color: #2d1b1b;
     font-size: 0.95rem;
 }
 
 .host-message {
-    margin-top: 40px;
-    padding: 30px;
-    background: rgba(188, 58, 17, 0.03);
-    border-radius: 16px;
-    border-left: 4px solid var(--accent-primary);
-    border: 1px solid rgba(188, 58, 17, 0.1);
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(188, 58, 17, 0.05), rgba(188, 17, 17, 0.03));
+    border-radius: 15px;
+    border-left: 5px solid #bc3a11;
+    position: relative;
 }
 
 .host-message blockquote {
     font-size: 1.3rem;
     font-style: italic;
-    color: var(--text-primary);
-    margin: 0 0 15px 0;
+    color: #2d1b1b;
+    margin: 0 0 1rem 0;
     line-height: 1.6;
     font-weight: 500;
 }
 
 .host-message cite {
-    color: var(--accent-primary);
+    color: #bc3a11;
     font-weight: 600;
     font-size: 1rem;
 }
 
-/* Responsive Design for Host Section */
+/* RTL Support for Persian */
+body[data-lang="fa"] .host-content {
+    direction: rtl;
+}
+
+body[data-lang="fa"] .host-info {
+    text-align: right;
+}
+
+body[data-lang="fa"] .quality-item {
+    border-left: none;
+    border-right: 4px solid #bc3a11;
+}
+
+body[data-lang="fa"] .host-message {
+    border-left: none;
+    border-right: 5px solid #bc3a11;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .host-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
+    .host {
+        padding: 60px 0;
     }
     
     .host h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .host-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .host-info {
+        text-align: left;
+    }
+    
+    body[data-lang="fa"] .host-info {
+        text-align: center;
     }
     
     .host-info h3 {
@@ -2577,12 +2587,7 @@ body[data-lang="fa"] .nav-menu a {
     
     .host-qualities {
         grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .quality-item {
-        justify-content: center;
-        text-align: left;
+        gap: 0.8rem;
     }
     
     .host-photo {
@@ -2591,10 +2596,6 @@ body[data-lang="fa"] .nav-menu a {
 }
 
 @media (max-width: 480px) {
-    .host {
-        padding: 60px 0;
-    }
-    
     .host h2 {
         font-size: 1.8rem;
     }
@@ -2609,6 +2610,24 @@ body[data-lang="fa"] .nav-menu a {
     
     .host-message blockquote {
         font-size: 1.1rem;
+    }
+    
+    .host-photo {
+        max-width: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .application-form {
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -2652,6 +2671,8 @@ body[data-lang="fa"] .nav-menu a {
     }
 }
 
+/* Legacy RTL rules removed - using modern high-specificity rules */
+
 /* Extra Small Mobile Devices */
 @media (max-width: 480px) {
     .tier-visual {
@@ -2673,4 +2694,5 @@ body[data-lang="fa"] .nav-menu a {
     .benefit-preview-item span {
         font-size: 0.75rem;
     }
+}
 }
