@@ -44,41 +44,6 @@ function switchLanguage(lang) {
     
     // Store language preference
     localStorage.setItem('preferred-language', lang);
-    
-    // Update countdown display
-    updateCountdown();
-}
-
-// Countdown Timer
-function updateCountdown() {
-    const now = new Date().getTime();
-    const launchDate = new Date('2025-09-15T00:00:00').getTime();
-    const distance = launchDate - now;
-    
-    if (distance > 0) {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        // Convert to Persian numbers if Persian is selected
-        const formatNumber = (num) => {
-            if (currentLang === 'fa') {
-                const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-                return num.toString().padStart(2, '0').split('').map(digit => persianNumbers[parseInt(digit)]).join('');
-            }
-            return num.toString().padStart(2, '0');
-        };
-        
-        document.getElementById('days').textContent = formatNumber(days);
-        document.getElementById('hours').textContent = formatNumber(hours);
-        document.getElementById('minutes').textContent = formatNumber(minutes);
-        document.getElementById('seconds').textContent = formatNumber(seconds);
-    } else {
-        // Launch date has passed
-        const message = currentLang === 'fa' ? 'روز راه‌اندازی فرا رسیده است!' : 'Launch Day Has Arrived!';
-        document.querySelector('.countdown-timer').innerHTML = `<h3>${message}</h3>`;
-    }
 }
 
 // Form validation
@@ -100,6 +65,14 @@ function validateApplicationForm(formData) {
     
     if (!formData.hometown || formData.hometown.trim().length < 2) {
         errors.push(currentLang === 'fa' ? 'شهر محل سکونت باید حداقل ۲ کاراکتر باشد' : 'Hometown must be at least 2 characters');
+    }
+    
+    if (!formData.height || formData.height.trim().length < 2) {
+        errors.push(currentLang === 'fa' ? 'قد باید وارد شود' : 'Height must be provided');
+    }
+    
+    if (!formData.weight || formData.weight.trim().length < 2) {
+        errors.push(currentLang === 'fa' ? 'وزن باید وارد شود' : 'Weight must be provided');
     }
     
     if (!formData.background || formData.background.trim().length < 50) {
@@ -148,6 +121,8 @@ async function handleApplicationSubmit(event) {
             from_age: data.age,
             from_gender: data.gender,
             from_hometown: data.hometown,
+            from_height: data.height,
+            from_weight: data.weight,
             from_background: data.background,
             from_motivation: data.motivation,
             from_instagram: data.instagram,
@@ -160,6 +135,8 @@ Name: ${data.name}
 Age: ${data.age}
 Gender: ${data.gender}
 Hometown: ${data.hometown}
+Height: ${data.height}
+Weight: ${data.weight}
 
 Athletic Background:
 ${data.background}
@@ -224,12 +201,126 @@ async function sendEmail(emailData) {
         from_age: emailData.from_age,
         from_gender: emailData.from_gender,
         from_hometown: emailData.from_hometown,
+        from_height: emailData.from_height,
+        from_weight: emailData.from_weight,
         from_background: emailData.from_background,
         from_motivation: emailData.from_motivation,
         from_instagram: emailData.from_instagram,
         from_youtube: emailData.from_youtube,
         subject: emailData.subject,
         message: emailData.message
+    }, userID);
+}
+
+// Contact form submission handler
+async function handleContactSubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Validate contact form
+    const errors = validateContactForm(data);
+    
+    if (errors.length > 0) {
+        const errorMessage = currentLang === 'fa' ? 'خطاهای زیر را برطرف کنید:' : 'Please fix the following errors:';
+        alert(`${errorMessage}\n\n${errors.join('\n')}`);
+        return;
+    }
+    
+    // Show loading state
+    const submitButton = event.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = currentLang === 'fa' ? 'در حال ارسال...' : 'Sending...';
+    submitButton.disabled = true;
+    submitButton.classList.add('loading');
+    
+    try {
+        // Send contact email using EmailJS service
+        const emailData = {
+            to_email: 'limitedgeshow@gmail.com',
+            from_name: data.name,
+            from_email: data.email,
+            subject: `Contact Form Message from ${data.name}`,
+            message: data.message,
+            time: new Date().toLocaleString()
+        };
+        
+        // Send email using EmailJS
+        await sendContactEmail(emailData);
+        
+        // Show success message
+        const successMessage = currentLang === 'fa' 
+            ? 'پیام شما با موفقیت ارسال شد! ما به زودی با شما تماس خواهیم گرفت.'
+            : 'Your message has been sent successfully! We will contact you soon.';
+        
+        alert(successMessage);
+        event.target.reset();
+        
+    } catch (error) {
+        console.error('Contact form submission error:', error);
+        
+        // Show error message
+        const errorMessage = currentLang === 'fa' 
+            ? 'خطا در ارسال پیام. لطفاً دوباره تلاش کنید یا با ما تماس بگیرید.'
+            : 'Error sending message. Please try again or contact us directly.';
+        
+        alert(errorMessage);
+        
+    } finally {
+        // Restore button state
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+        submitButton.classList.remove('loading');
+    }
+}
+
+// Contact form validation
+function validateContactForm(formData) {
+    const errors = [];
+    
+    // Check required fields
+    if (!formData.name || formData.name.trim().length < 2) {
+        errors.push(currentLang === 'fa' ? 'نام باید حداقل ۲ کاراکتر باشد' : 'Name must be at least 2 characters');
+    }
+    
+    if (!formData.email || !isValidEmail(formData.email)) {
+        errors.push(currentLang === 'fa' ? 'لطفاً یک ایمیل معتبر وارد کنید' : 'Please enter a valid email address');
+    }
+    
+    if (!formData.message || formData.message.trim().length < 10) {
+        errors.push(currentLang === 'fa' ? 'پیام باید حداقل ۱۰ کاراکتر باشد' : 'Message must be at least 10 characters');
+    }
+    
+    return errors;
+}
+
+// Email validation helper
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Contact email sending function using EmailJS
+async function sendContactEmail(emailData) {
+    // Initialize EmailJS (you'll need to add EmailJS script to HTML)
+    if (typeof emailjs === 'undefined') {
+        throw new Error('EmailJS not loaded');
+    }
+    
+    // EmailJS configuration for contact form
+    const serviceID = 'service_5dx5or8'; // Same service as application form
+    const templateID = 'template_contact'; // Separate contact template
+    const userID = 'czysmMiEJ6mhsBgIR'; // Same user ID
+    
+    // Send email using EmailJS template
+    return emailjs.send(serviceID, templateID, {
+        to_email: emailData.to_email,
+        from_name: emailData.from_name,
+        from_email: emailData.from_email,
+        subject: emailData.subject,
+        message: emailData.message,
+        time: emailData.time
     }, userID);
 }
 
@@ -250,6 +341,8 @@ Name: ${formData.name}
 Age: ${formData.age}
 Gender: ${formData.gender}
 Hometown: ${formData.hometown}
+Height: ${formData.height}
+Weight: ${formData.weight}
 
 Athletic Background:
 ${formData.background}
@@ -390,14 +483,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeTierInteractions();
     addGalleryAnimations();
     
-    // Initialize countdown
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-    
     // Initialize form submission
     const applicationForm = document.querySelector('.application-form');
     if (applicationForm) {
         applicationForm.addEventListener('submit', handleApplicationSubmit);
+    }
+    
+    // Initialize contact form submission
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactSubmit);
     }
     
     // Teaser video functionality

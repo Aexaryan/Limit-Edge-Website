@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limit Edge - The Ultimate Fitness Challenge Show | مرز توان - نمایش چالش تناسب اندام</title>
-    <link rel="stylesheet" href="styles.css?v=complete-redesign-v9">
+    <link rel="stylesheet" href="styles.css?v=complete-redesign-v14">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
@@ -60,10 +60,10 @@
                 </div>
             </div>
             <div class="hero-video">
-                <div class="video-placeholder">
-                    <i class="fas fa-play-circle"></i>
-                    <p data-en="Teaser Video" data-fa="ویدیوی تیزر">Teaser Video</p>
-                </div>
+                <video controls poster="assets/images/hero/torreja.avif" class="teaser-video">
+                    <source src="assets/teaser/WhatsApp Video 2025-09-14 at 15.10.07-esv2-100p-bg-99p.mp4" type="video/mp4">
+                    <p data-en="Your browser doesn't support HTML5 video. Here is a link to the video instead." data-fa="مرورگر شما از ویدیو HTML5 پشتیبانی نمی‌کند. در عوض، اینجا لینک ویدیو است.">Your browser doesn't support HTML5 video.</p>
+                </video>
             </div>
         </div>
     </section>
@@ -114,38 +114,13 @@
         </div>
     </section>
 
-    <!-- Countdown -->
-    <section class="countdown">
-        <div class="container">
-            <h2 data-en="Countdown to Pilot Launch" data-fa="شمارش معکوس تا راه‌اندازی آزمایشی">Countdown to Pilot Launch</h2>
-            <div class="countdown-timer">
-                <div class="countdown-item">
-                    <span class="number" id="days">00</span>
-                    <span class="label" data-en="Days" data-fa="روز">Days</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="hours">00</span>
-                    <span class="label" data-en="Hours" data-fa="ساعت">Hours</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="minutes">00</span>
-                    <span class="label" data-en="Minutes" data-fa="دقیقه">Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="seconds">00</span>
-                    <span class="label" data-en="Seconds" data-fa="ثانیه">Seconds</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About the Show -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
                     <h2 data-en="About the Show" data-fa="درباره نمایش">About the Show</h2>
-                    <p class="about-description" data-en="Limit Edge is a groundbreaking fitness competition that pushes athletes to their absolute limits through a series of intense challenges designed to test both physical and mental endurance." data-fa="مرز توان یک رقابت تناسب اندام انقلابی است که ورزشکاران را از طریق مجموعه‌ای از چالش‌های شدید که برای آزمایش استقامت جسمی و ذهنی طراحی شده‌اند، به حد نهایی خود می‌رساند.">Limit Edge is a groundbreaking fitness competition that pushes athletes to their absolute limits through a series of intense challenges designed to test both physical and mental endurance.</p>
+                    <p class="about-description" data-en="Limit Edge is a groundbreaking fitness competition that pushes athletes to their absolute limits through a series of intense challenges designed to test both physical and mental endurance." data-fa="مرز توان یک رقابت چالشی استقامتی است که ورزشکاران را از طریق مجموعه‌ای از چالش‌های شدید که برای آزمایش استقامت جسمی و ذهنی طراحی شده‌اند، به حد نهایی خود می‌رساند.">Limit Edge is a groundbreaking fitness competition that pushes athletes to their absolute limits through a series of intense challenges designed to test both physical and mental endurance.</p>
                     <div class="mission">
                         <h3 data-en="Our Mission" data-fa="ماموریت ما">Our Mission</h3>
                         <p data-en="&quot;To inspire strength, endurance, and unity through competition.&quot;" data-fa="&quot;الهام بخشیدن به قدرت، استقامت و وحدت از طریق رقابت.&quot;">"To inspire strength, endurance, and unity through competition."</p>
@@ -172,15 +147,15 @@
     <!-- Host Section -->
     <section id="host" class="host">
         <div class="container">
-            <h2 data-en="Meet Your Host" data-fa="میزبان خود را ملاقات کنید">Meet Your Host</h2>
+            <h2 data-en="Meet Your Host" data-fa="مجری">Meet Your Host</h2>
             <div class="host-content">
                 <div class="host-photo-container">
-                    <img src="assets/images/host/Reza_Madaddi.jpg" alt="Reza Madaddi - Limit Edge Host" class="host-photo">
+                    <img src="assets/images/host/Reza-15 copy.png" alt="Reza Madaddi - Limit Edge Host" class="host-photo">
                 </div>
                 <div class="host-info">
                     <h3 data-en="Reza Madaddi" data-fa="رضا مددی">Reza Madaddi</h3>
                     <p class="host-title" data-en="Fitness Expert & Show Host" data-fa="متخصص تناسب اندام و میزبان نمایش">Fitness Expert & Show Host</p>
-                    <p class="host-description" data-en="Reza Madaddi is a renowned fitness expert, motivational speaker, and the charismatic host of Limit Edge. With over 15 years of experience in the fitness industry, Reza has dedicated his life to helping people push beyond their perceived limitations and discover their true potential." data-fa="رضا مددی یک متخصص تناسب اندام مشهور، سخنران انگیزشی و میزبان کاریزماتیک لیمیت اج است. با بیش از ۱۵ سال تجربه در صنعت تناسب اندام، رضا زندگی خود را وقف کمک به مردم برای عبور از محدودیت‌های درک شده خود و کشف پتانسیل واقعی خود کرده است.">Reza Madaddi is a renowned fitness expert, motivational speaker, and the charismatic host of Limit Edge. With over 15 years of experience in the fitness industry, Reza has dedicated his life to helping people push beyond their perceived limitations and discover their true potential.</p>
+                    <p class="host-description" data-en="Reza Madaddi is a renowned fitness expert, motivational speaker, and the charismatic host of Limit Edge. With over 15 years of experience in the fitness industry, Reza has dedicated his life to helping people push beyond their perceived limitations and discover their true potential." data-fa="رضا مددی یک متخصص تناسب اندام مشهور، سخنران انگیزشی و میزبان کاریزماتیک مرز توان است. با بیش از ۱۵ سال تجربه در صنعت تناسب اندام، رضا زندگی خود را وقف کمک به مردم برای عبور از محدودیت‌های درک شده خود و کشف پتانسیل واقعی خود کرده است.">Reza Madaddi is a renowned fitness expert, motivational speaker, and the charismatic host of Limit Edge. With over 15 years of experience in the fitness industry, Reza has dedicated his life to helping people push beyond their perceived limitations and discover their true potential.</p>
                     <div class="host-qualities">
                         <div class="quality-item">
                             <i class="fas fa-fire"></i>
@@ -244,14 +219,14 @@
         <div class="container">
             <div class="sponsors-header">
                 <h2 data-en="Sponsors & Partners" data-fa="حامیان و شرکا">Sponsors & Partners</h2>
-                <p class="sponsors-subtitle" data-en="Join the ultimate fitness revolution" data-fa="به انقلاب نهایی تناسب اندام بپیوندید">Join the ultimate fitness revolution</p>
+                <p class="sponsors-subtitle" data-en="Join the ultimate fitness revolution" data-fa="به ما بپیوندید">Join the ultimate fitness revolution</p>
             </div>
             
             <!-- Why Partner Section -->
             <div class="partnership-benefits">
                 <div class="benefits-header">
                     <h3 data-en="Why Partner With Us" data-fa="چرا با ما همکاری کنید">Why Partner With Us</h3>
-                    <p data-en="Unlock unprecedented opportunities in the fitness entertainment industry" data-fa="فرصت‌های بی‌سابقه در صنعت سرگرمی تناسب اندام را باز کنید">Unlock unprecedented opportunities in the fitness entertainment industry</p>
+                    <p data-en="Unlock unprecedented opportunities in the fitness entertainment industry" data-fa="فرصت‌های بی‌سابقه در صنعت سرگرمی تناسب اندام ">Unlock unprecedented opportunities in the fitness entertainment industry</p>
                 </div>
                 <div class="benefits-grid">
                     <div class="benefit-card">
@@ -273,7 +248,7 @@
                             <i class="fas fa-share-alt"></i>
                         </div>
                         <h4 data-en="Social Integration" data-fa="ادغام اجتماعی">Social Integration</h4>
-                        <p data-en="Seamless social media integration and viral content opportunities" data-fa="ادغام بی‌نقص رسانه‌های اجتماعی و فرصت‌های محتوای ویروسی">Seamless social media integration and viral content opportunities</p>
+                        <p data-en="Seamless social media integration and viral content opportunities" data-fa="ادغام بی‌نقص رسانه‌های اجتماعی و فرصت‌های محتوای فراگیر">Seamless social media integration and viral content opportunities</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">
@@ -491,45 +466,6 @@
         </div>
     </section>
 
-    <!-- News & Updates -->
-    <section id="news" class="news">
-        <div class="container">
-            <h2 data-en="News & Updates" data-fa="اخبار و به‌روزرسانی‌ها">News & Updates</h2>
-            <div class="news-grid">
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="assets/images/news/Tips-from-Our.png" alt="Training Tips from Our Athletes" class="news-photo">
-                    </div>
-                    <div class="news-content">
-                        <h3 data-en="Training Tips from Our Athletes" data-fa="نکات تمرینی از ورزشکاران ما">Training Tips from Our Athletes</h3>
-                        <p data-en="Get exclusive insights into the training regimens that prepare our competitors for the ultimate challenges." data-fa="بینش‌های انحصاری در مورد رژیم‌های تمرینی که رقبای ما را برای نهایی‌ترین چالش‌ها آماده می‌کنند، دریافت کنید.">Get exclusive insights into the training regimens that prepare our competitors for the ultimate challenges.</p>
-                        <span class="news-date">December 15, 2024</span>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="assets/images/news/behindthescen.png" alt="Behind the Scenes: Challenge Design" class="news-photo">
-                    </div>
-                    <div class="news-content">
-                        <h3 data-en="Behind the Scenes: Challenge Design" data-fa="پشت صحنه: طراحی چالش">Behind the Scenes: Challenge Design</h3>
-                        <p data-en="Discover how our team creates the most grueling and exciting challenges for the show." data-fa="کشف کنید که چگونه تیم ما سخت‌ترین و هیجان‌انگیزترین چالش‌ها را برای نمایش ایجاد می‌کند.">Discover how our team creates the most grueling and exciting challenges for the show.</p>
-                        <span class="news-date">December 10, 2024</span>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="assets/images/news/Sponsorship-announsment.png" alt="New Sponsor Announcement" class="news-photo">
-                    </div>
-                    <div class="news-content">
-                        <h3 data-en="New Sponsor Announcement" data-fa="اعلان حامی جدید">New Sponsor Announcement</h3>
-                        <p data-en="We're excited to welcome our newest partner to the Limit Edge family." data-fa="ما هیجان‌زده هستیم که جدیدترین شریک خود را به خانواده لیمیت اج خوش‌آمد بگوییم.">We're excited to welcome our newest partner to the Limit Edge family.</p>
-                        <span class="news-date">December 5, 2024</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <!-- Media Gallery -->
     <section id="media" class="media">
         <div class="container">
@@ -543,22 +479,37 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-category="behind-scenes">
-                    <div class="image-placeholder">BTS 1</div>
+                    <img src="assets/images/gallery/1.png" alt="Behind the Scenes - Limit Edge" loading="lazy">
                 </div>
                 <div class="gallery-item" data-category="challenges">
-                    <div class="image-placeholder">CHALLENGE 1</div>
+                    <img src="assets/images/gallery/2.png" alt="Challenge - Limit Edge" loading="lazy">
                 </div>
                 <div class="gallery-item" data-category="athletes">
-                    <div class="image-placeholder">ATHLETE 1</div>
+                    <img src="assets/images/gallery/3.png" alt="Athlete - Limit Edge" loading="lazy">
                 </div>
                 <div class="gallery-item" data-category="events">
-                    <div class="image-placeholder">EVENT 1</div>
+                    <img src="assets/images/gallery/4.png" alt="Event - Limit Edge" loading="lazy">
                 </div>
                 <div class="gallery-item" data-category="behind-scenes">
-                    <div class="image-placeholder">BTS 2</div>
+                    <img src="assets/images/gallery/5.png" alt="Behind the Scenes - Limit Edge" loading="lazy">
                 </div>
                 <div class="gallery-item" data-category="challenges">
-                    <div class="image-placeholder">CHALLENGE 2</div>
+                    <img src="assets/images/gallery/6.png" alt="Challenge - Limit Edge" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="athletes">
+                    <img src="assets/images/gallery/7.png" alt="Athlete - Limit Edge" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="assets/images/gallery/8.png" alt="Event - Limit Edge" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="behind-scenes">
+                    <img src="assets/images/gallery/9.png" alt="Behind the Scenes - Limit Edge" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="challenges">
+                    <img src="assets/images/gallery/10.png" alt="Challenge - Limit Edge" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="athletes">
+                    <img src="assets/images/gallery/12.png" alt="Athlete - Limit Edge" loading="lazy">
                 </div>
             </div>
         </div>
@@ -588,17 +539,17 @@
                 </div>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <h3 data-en="Sponsorship Inquiries" data-fa="استعلامات حمایت">Sponsorship Inquiries</h3>
+                        <h3 data-en="Sponsorship Inquiries" data-fa="راه های ارتباطی برای حامیان ">Sponsorship Inquiries</h3>
                         <p>Email: sponsors@limitedge.com</p>
-                        <p>Phone: (555) 123-4567</p>
+                        <p>Phone: (705) 970-0443</p>
                     </div>
                     <div class="contact-item">
                         <h3 data-en="Follow Us" data-fa="ما را دنبال کنید">Follow Us</h3>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/limitedgeshow/"><i class="fab fa-instagram"></i></a>
+                            <!-- <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a> -->
+                            <a href="https://www.youtube.com/channel/UCMmkSzXdmrA7KjAyw3Z36cA"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
