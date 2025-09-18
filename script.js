@@ -495,6 +495,8 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', handleContactSubmit);
     }
     
+    // Apply Button Functionality
+    initializeApplyButton();
     
     // Requirements Popup Functionality
     initializeRequirementsPopup();
@@ -593,6 +595,34 @@ function scrollToApplicationForm() {
         setTimeout(() => {
             applicationForm.style.boxShadow = '';
         }, 2000);
+    }
+}
+
+// Apply Button Functions
+function initializeApplyButton() {
+    const applyButton = document.querySelector('.hero-buttons .btn-primary');
+    if (applyButton) {
+        applyButton.addEventListener('click', () => {
+            scrollToApplySection();
+        });
+    }
+}
+
+function scrollToApplySection() {
+    const applySection = document.getElementById('apply');
+    if (applySection) {
+        applySection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Add a subtle highlight effect to the section
+        applySection.style.transition = 'box-shadow 0.3s ease';
+        applySection.style.boxShadow = '0 0 30px rgba(255, 107, 53, 0.2)';
+        
+        setTimeout(() => {
+            applySection.style.boxShadow = '';
+        }, 3000);
     }
 }
 
