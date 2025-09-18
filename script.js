@@ -71,8 +71,12 @@ function validateApplicationForm(formData) {
     const ageValue = convertPersianToLatin(formData.age);
     const ageNumber = parseInt(ageValue);
     
-    if (!formData.age || isNaN(ageNumber) || ageNumber < 18 || ageNumber > 65) {
-        errors.push(currentLang === 'fa' ? 'سن باید بین ۱۸ تا ۶۵ سال باشد' : 'Age must be between 18 and 65');
+    if (!formData.age || formData.age.trim() === '') {
+        errors.push(currentLang === 'fa' ? 'لطفاً سن خود را وارد کنید' : 'Please enter your age');
+    } else if (isNaN(ageNumber)) {
+        errors.push(currentLang === 'fa' ? 'سن باید یک عدد معتبر باشد' : 'Age must be a valid number');
+    } else if (ageNumber < 20 || ageNumber > 40) {
+        errors.push(currentLang === 'fa' ? 'سن باید بین ۲۰ تا ۴۰ سال باشد' : 'Age must be between 20 and 40 years');
     }
     
     if (!formData.gender) {
