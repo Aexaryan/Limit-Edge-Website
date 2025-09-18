@@ -506,11 +506,105 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    // Requirements Popup Functionality
+    initializeRequirementsPopup();
+    
     console.log('✨ All features initialized successfully!');
     console.log('🎯 Bilingual support: English & Persian');
     console.log('💎 Professional tier visual elements with hover effects');
     console.log('📧 Email functionality: Applications sent to limitedgeshow@gmail.com');
+    console.log('📋 Requirements popup with participant criteria');
 });
+
+// Requirements Popup Functions
+function initializeRequirementsPopup() {
+    const requirementsBtn = document.querySelector('.requirements-btn');
+    const requirementsModal = document.getElementById('requirementsModal');
+    const requirementsClose = document.querySelector('.requirements-close');
+    const requirementsCloseBtn = document.querySelector('.requirements-close-btn');
+    const proceedToFormBtn = document.querySelector('.proceed-to-form-btn');
+    const applicationForm = document.querySelector('.application-form');
+    
+    if (!requirementsBtn || !requirementsModal) {
+        console.log('Requirements popup elements not found');
+        return;
+    }
+    
+    // Show popup when requirements button is clicked
+    requirementsBtn.addEventListener('click', () => {
+        showRequirementsModal();
+    });
+    
+    // Close popup when X is clicked
+    if (requirementsClose) {
+        requirementsClose.addEventListener('click', () => {
+            hideRequirementsModal();
+        });
+    }
+    
+    // Close popup when close button is clicked
+    if (requirementsCloseBtn) {
+        requirementsCloseBtn.addEventListener('click', () => {
+            hideRequirementsModal();
+        });
+    }
+    
+    // Proceed to form when proceed button is clicked
+    if (proceedToFormBtn) {
+        proceedToFormBtn.addEventListener('click', () => {
+            hideRequirementsModal();
+            scrollToApplicationForm();
+        });
+    }
+    
+    // Close popup when clicking outside the modal
+    requirementsModal.addEventListener('click', (e) => {
+        if (e.target === requirementsModal) {
+            hideRequirementsModal();
+        }
+    });
+    
+    // Close popup with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && requirementsModal.classList.contains('show')) {
+            hideRequirementsModal();
+        }
+    });
+}
+
+function showRequirementsModal() {
+    const requirementsModal = document.getElementById('requirementsModal');
+    if (requirementsModal) {
+        requirementsModal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function hideRequirementsModal() {
+    const requirementsModal = document.getElementById('requirementsModal');
+    if (requirementsModal) {
+        requirementsModal.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+function scrollToApplicationForm() {
+    const applicationForm = document.querySelector('.application-form');
+    if (applicationForm) {
+        applicationForm.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Add a subtle highlight effect
+        applicationForm.style.transition = 'box-shadow 0.3s ease';
+        applicationForm.style.boxShadow = '0 0 20px rgba(255, 107, 53, 0.3)';
+        
+        setTimeout(() => {
+            applicationForm.style.boxShadow = '';
+        }, 2000);
+    }
+}
 
 // Navbar background change on scroll
 window.addEventListener('scroll', () => {

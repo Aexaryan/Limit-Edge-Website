@@ -409,6 +409,208 @@
         <div class="container">
             <h2 data-en="Think You Have What It Takes?" data-fa="فکر می‌کنید اهل چالش هستید؟">Think You Have What It Takes?</h2>
             <p class="section-intro" data-en="Apply now to join the ultimate fitness challenge." data-fa=" برای پیوستن به چالش درخواست دهید.">Apply now to join the ultimate fitness challenge.</p>
+            
+            <!-- Requirements Popup Trigger Button -->
+            <div class="requirements-trigger">
+                <button type="button" class="btn btn-primary requirements-btn" data-en="View Participant Requirements" data-fa="مشاهده شرایط شرکت‌کنندگان">
+                    <i class="fas fa-info-circle"></i>
+                    View Participant Requirements
+                </button>
+            </div>
+
+            <!-- Requirements Popup Modal -->
+            <div id="requirementsModal" class="requirements-modal">
+                <div class="requirements-modal-content">
+                    <div class="requirements-header">
+                        <h3 data-en="Participant Requirements" data-fa="شرایط شرکت‌کنندگان">Participant Requirements</h3>
+                        <span class="requirements-close">&times;</span>
+                    </div>
+                    
+                    <div class="requirements-body">
+                        <!-- Overview Section -->
+                        <div class="requirements-section">
+                            <div class="requirements-overview">
+                                <h4 data-en="Overview" data-fa="نمای کلی">Overview</h4>
+                                <div class="overview-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-number">10</div>
+                                        <div class="stat-label" data-en="Athletes" data-fa="ورزشکار">Athletes</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-number">20-40</div>
+                                        <div class="stat-label" data-en="Years" data-fa="سال">Years</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-number">5+5</div>
+                                        <div class="stat-label" data-en="Gender Balance" data-fa="تعادل جنسیتی">Gender Balance</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Eligibility Criteria -->
+                        <div class="requirements-section">
+                            <h4 data-en="Eligibility Criteria" data-fa="معیارهای واجد شرایط بودن">Eligibility Criteria</h4>
+                            
+                            <div class="criteria-grid">
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">🎯</div>
+                                    <div class="criteria-content">
+                                        <h5 data-en="Age Requirements" data-fa="شرایط سنی">Age Requirements</h5>
+                                        <p class="criteria-range" data-en="20-40 Years" data-fa="20-40 سال">20-40 Years</p>
+                                        <p class="criteria-desc" data-en="Prime stage of physical ability and competitive spirit" data-fa="دوره اوج توانایی جسمی و روحیه رقابتی">Prime stage of physical ability and competitive spirit</p>
+                                        <ul>
+                                            <li data-en="Peak physical performance age range" data-fa="محدوده سنی اوج عملکرد جسمی">Peak physical performance age range</li>
+                                            <li data-en="Mature decision-making capabilities" data-fa="قابلیت تصمیم‌گیری بالغ">Mature decision-making capabilities</li>
+                                            <li data-en="Strong competitive drive and motivation" data-fa="انگیزه و روحیه رقابتی قوی">Strong competitive drive and motivation</li>
+                                            <li data-en="Professional attitude and commitment" data-fa="نگرش حرفه‌ای و تعهد">Professional attitude and commitment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">⚖️</div>
+                                    <div class="criteria-content">
+                                        <h5 data-en="Gender Balance" data-fa="تعادل جنسیتی">Gender Balance</h5>
+                                        <p class="criteria-range" data-en="5 Men & 5 Women" data-fa="5 مرد و 5 زن">5 Men & 5 Women</p>
+                                        <p class="criteria-desc" data-en="Emphasizing gender equality and fair competition" data-fa="تأکید بر برابری جنسیتی و رقابت عادلانه">Emphasizing gender equality and fair competition</p>
+                                        <ul>
+                                            <li data-en="Equal representation and opportunity" data-fa="نمایندگی و فرصت برابر">Equal representation and opportunity</li>
+                                            <li data-en="Fair competition across all challenges" data-fa="رقابت عادلانه در تمام چالش‌ها">Fair competition across all challenges</li>
+                                            <li data-en="Diverse perspectives and approaches" data-fa="دیدگاه‌ها و رویکردهای متنوع">Diverse perspectives and approaches</li>
+                                            <li data-en="Inclusive and representative casting" data-fa="انتخاب فراگیر و نماینده">Inclusive and representative casting</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">💪</div>
+                                    <div class="criteria-content">
+                                        <h5 data-en="Athletic Background" data-fa="پیشینه ورزشی">Athletic Background</h5>
+                                        <p class="criteria-range" data-en="3+ Years Experience" data-fa="3+ سال تجربه">3+ Years Experience</p>
+                                        <p class="criteria-desc" data-en="Minimum athletic experience required" data-fa="حداقل تجربه ورزشی مورد نیاز">Minimum athletic experience required</p>
+                                        <ul>
+                                            <li data-en="Strength, endurance, or speed sports" data-fa="ورزش‌های قدرتی، استقامتی یا سرعتی">Strength, endurance, or speed sports</li>
+                                            <li data-en="CrossFit, martial arts, bodybuilding" data-fa="کراس‌فیت، هنرهای رزمی، بدنسازی">CrossFit, martial arts, bodybuilding</li>
+                                            <li data-en="Swimming, running, cycling" data-fa="شنا، دویدن، دوچرخه‌سواری">Swimming, running, cycling</li>
+                                            <li data-en="Competitive sports background" data-fa="پیشینه ورزش رقابتی">Competitive sports background</li>
+                                            <li data-en="Demonstrated athletic achievements" data-fa="دستاوردهای ورزشی اثبات شده">Demonstrated athletic achievements</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">🏥</div>
+                                    <div class="criteria-content">
+                                        <h5 data-en="Physical Readiness" data-fa="آمادگی جسمی">Physical Readiness</h5>
+                                        <p class="criteria-range" data-en="Health Screening" data-fa="بررسی سلامت">Health Screening</p>
+                                        <p class="criteria-desc" data-en="Professional medical and fitness assessments" data-fa="ارزیابی‌های پزشکی و آمادگی جسمی حرفه‌ای">Professional medical and fitness assessments</p>
+                                        <ul>
+                                            <li data-en="Comprehensive health examinations" data-fa="معاینات جامع سلامت">Comprehensive health examinations</li>
+                                            <li data-en="Fitness assessments and evaluations" data-fa="ارزیابی‌ها و سنجش‌های آمادگی جسمی">Fitness assessments and evaluations</li>
+                                            <li data-en="Injury history and clearance" data-fa="سابقه آسیب و مجوز">Injury history and clearance</li>
+                                            <li data-en="Mental health and stress management" data-fa="سلامت روان و مدیریت استرس">Mental health and stress management</li>
+                                            <li data-en="Safety protocol compliance" data-fa="رعایت پروتکل‌های ایمنی">Safety protocol compliance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personality & Media Requirements -->
+                        <div class="requirements-section">
+                            <h4 data-en="Personality & Media Requirements" data-fa="شرایط شخصیت و رسانه">Personality & Media Requirements</h4>
+                            
+                            <div class="personality-grid">
+                                <div class="personality-column">
+                                    <h5 data-en="Personality Traits" data-fa="ویژگی‌های شخصیتی">Personality Traits</h5>
+                                    <div class="trait-list">
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Strong competitive spirit and determination" data-fa="روحیه رقابتی قوی و عزم">Strong competitive spirit and determination</span>
+                                        </div>
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Positive attitude and team player mentality" data-fa="نگرش مثبت و روحیه تیمی">Positive attitude and team player mentality</span>
+                                        </div>
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Resilience and ability to handle pressure" data-fa="انعطاف‌پذیری و توانایی مدیریت فشار">Resilience and ability to handle pressure</span>
+                                        </div>
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Good communication skills and charisma" data-fa="مهارت‌های ارتباطی خوب و کاریزما">Good communication skills and charisma</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="personality-column">
+                                    <h5 data-en="Media Readiness" data-fa="آمادگی رسانه‌ای">Media Readiness</h5>
+                                    <div class="trait-list">
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Comfortable with cameras and interviews" data-fa="راحتی با دوربین و مصاحبه">Comfortable with cameras and interviews</span>
+                                        </div>
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Ability to express thoughts clearly" data-fa="توانایی بیان واضح افکار">Ability to express thoughts clearly</span>
+                                        </div>
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Willingness to share personal stories" data-fa="تمایل به اشتراک‌گذاری داستان‌های شخصی">Willingness to share personal stories</span>
+                                        </div>
+                                        <div class="trait-item">
+                                            <i class="fas fa-check"></i>
+                                            <span data-en="Professional conduct and media training" data-fa="رفتار حرفه‌ای و آموزش رسانه">Professional conduct and media training</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Selection Process -->
+                        <div class="requirements-section">
+                            <h4 data-en="Selection Process" data-fa="فرآیند انتخاب">Selection Process</h4>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5 data-en="Application" data-fa="درخواست">Application</h5>
+                                        <p data-en="Online application with athletic background and personal information" data-fa="درخواست آنلاین با پیشینه ورزشی و اطلاعات شخصی">Online application with athletic background and personal information</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5 data-en="Screening" data-fa="غربالگری">Screening</h5>
+                                        <p data-en="Initial review of applications and background checks" data-fa="بررسی اولیه درخواست‌ها و بررسی سوابق">Initial review of applications and background checks</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5 data-en="Interviews" data-fa="مصاحبه">Interviews</h5>
+                                        <p data-en="Video interviews and personality assessments" data-fa="مصاحبه‌های ویدیویی و ارزیابی شخصیت">Video interviews and personality assessments</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h5 data-en="Final Selection" data-fa="انتخاب نهایی">Final Selection</h5>
+                                        <p data-en="Final selection based on athletic ability, personality, and media potential" data-fa="انتخاب نهایی بر اساس توانایی ورزشی، شخصیت و پتانسیل رسانه‌ای">Final selection based on athletic ability, personality, and media potential</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="requirements-footer">
+                        <button type="button" class="btn btn-secondary requirements-close-btn" data-en="Close" data-fa="بستن">Close</button>
+                        <button type="button" class="btn btn-primary proceed-to-form-btn" data-en="Proceed to Application" data-fa="ادامه به درخواست">Proceed to Application</button>
+                    </div>
+                </div>
+            </div>
+
             <form class="application-form">
                 <div class="form-row">
                     <div class="form-group">
