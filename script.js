@@ -46,6 +46,18 @@ function switchLanguage(lang) {
     localStorage.setItem('preferred-language', lang);
 }
 
+// Convert Persian numbers to Latin numbers
+function convertPersianToLatin(str) {
+    const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    const latinNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    
+    let result = str;
+    for (let i = 0; i < persianNumbers.length; i++) {
+        result = result.replace(new RegExp(persianNumbers[i], 'g'), latinNumbers[i]);
+    }
+    return result;
+}
+
 // Form validation
 function validateApplicationForm(formData) {
     const errors = [];
@@ -55,7 +67,11 @@ function validateApplicationForm(formData) {
         errors.push(currentLang === 'fa' ? 'نام باید حداقل ۲ کاراکتر باشد' : 'Name must be at least 2 characters');
     }
     
-    if (!formData.age || formData.age < 18 || formData.age > 65) {
+    // Convert Persian numbers in age field
+    const ageValue = convertPersianToLatin(formData.age);
+    const ageNumber = parseInt(ageValue);
+    
+    if (!formData.age || isNaN(ageNumber) || ageNumber < 18 || ageNumber > 65) {
         errors.push(currentLang === 'fa' ? 'سن باید بین ۱۸ تا ۶۵ سال باشد' : 'Age must be between 18 and 65');
     }
     
@@ -114,15 +130,23 @@ async function handleApplicationSubmit(event) {
     submitButton.classList.add('loading');
     
     try {
+        // Convert Persian numbers to Latin numbers
+        const processedData = {
+            ...data,
+            age: convertPersianToLatin(data.age),
+            height: convertPersianToLatin(data.height),
+            weight: convertPersianToLatin(data.weight)
+        };
+        
         // Send email using EmailJS service
         const emailData = {
             to_email: 'limitedgeshow@gmail.com',
-            from_name: data.name,
-            from_age: data.age,
-            from_gender: data.gender,
-            from_hometown: data.hometown,
-            from_height: data.height,
-            from_weight: data.weight,
+            from_name: processedData.name,
+            from_age: processedData.age,
+            from_gender: processedData.gender,
+            from_hometown: processedData.hometown,
+            from_height: processedData.height,
+            from_weight: processedData.weight,
             from_background: data.background,
             from_motivation: data.motivation,
             from_instagram: data.instagram,
@@ -501,6 +525,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Requirements Popup Functionality
     initializeRequirementsPopup();
     
+    // Initialize Persian number conversion for form fields
+    initializePersianNumberConversion();
+    
     console.log('✨ All features initialized successfully!');
     console.log('🎯 Bilingual support: English & Persian');
     console.log('💎 Professional tier visual elements with hover effects');
@@ -624,6 +651,32 @@ function scrollToApplySection() {
             applySection.style.boxShadow = '';
         }, 3000);
     }
+}
+
+// Persian Number Conversion Functions
+function initializePersianNumberConversion() {
+    const numberFields = ['age', 'height', 'weight'];
+    
+    numberFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            field.addEventListener('input', (e) => {
+                const convertedValue = convertPersianToLatin(e.target.value);
+                if (convertedValue !== e.target.value) {
+                    e.target.value = convertedValue;
+                }
+            });
+            
+            field.addEventListener('paste', (e) => {
+                setTimeout(() => {
+                    const convertedValue = convertPersianToLatin(e.target.value);
+                    if (convertedValue !== e.target.value) {
+                        e.target.value = convertedValue;
+                    }
+                }, 10);
+            });
+        }
+    });
 }
 
 // Navbar background change on scroll
