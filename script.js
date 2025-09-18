@@ -495,16 +495,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', handleContactSubmit);
     }
     
-    // Teaser video functionality
-    const teaserButton = document.querySelector('.btn-secondary');
-    if (teaserButton) {
-        teaserButton.addEventListener('click', () => {
-            const message = currentLang === 'fa' 
-                ? 'ویدیوی تیزر به زودی در دسترس خواهد بود!'
-                : 'Teaser will be available soon!';
-            alert(message);
-        });
-    }
     
     // Requirements Popup Functionality
     initializeRequirementsPopup();
