@@ -87,12 +87,28 @@ function validateApplicationForm(formData) {
         errors.push(currentLang === 'fa' ? 'شهر محل سکونت باید حداقل ۲ کاراکتر باشد' : 'Hometown must be at least 2 characters');
     }
     
-    if (!formData.height || formData.height.trim().length < 2) {
-        errors.push(currentLang === 'fa' ? 'قد باید وارد شود' : 'Height must be provided');
+    // Height validation
+    const heightValue = convertPersianToLatin(formData.height);
+    const heightNumber = parseInt(heightValue);
+    
+    if (!formData.height || formData.height.trim() === '') {
+        errors.push(currentLang === 'fa' ? 'لطفاً قد خود را وارد کنید' : 'Please enter your height');
+    } else if (isNaN(heightNumber)) {
+        errors.push(currentLang === 'fa' ? 'قد باید یک عدد معتبر باشد' : 'Height must be a valid number');
+    } else if (heightNumber < 140 || heightNumber > 220) {
+        errors.push(currentLang === 'fa' ? 'قد باید بین ۱۴۰ تا ۲۲۰ سانتی‌متر باشد' : 'Height must be between 140-220 cm');
     }
     
-    if (!formData.weight || formData.weight.trim().length < 2) {
-        errors.push(currentLang === 'fa' ? 'وزن باید وارد شود' : 'Weight must be provided');
+    // Weight validation
+    const weightValue = convertPersianToLatin(formData.weight);
+    const weightNumber = parseInt(weightValue);
+    
+    if (!formData.weight || formData.weight.trim() === '') {
+        errors.push(currentLang === 'fa' ? 'لطفاً وزن خود را وارد کنید' : 'Please enter your weight');
+    } else if (isNaN(weightNumber)) {
+        errors.push(currentLang === 'fa' ? 'وزن باید یک عدد معتبر باشد' : 'Weight must be a valid number');
+    } else if (weightNumber < 40 || weightNumber > 150) {
+        errors.push(currentLang === 'fa' ? 'وزن باید بین ۴۰ تا ۱۵۰ کیلوگرم باشد' : 'Weight must be between 40-150 kg');
     }
     
     if (!formData.background || formData.background.trim().length < 50) {
