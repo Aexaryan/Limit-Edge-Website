@@ -67,6 +67,10 @@ function validateApplicationForm(formData) {
         errors.push(currentLang === 'fa' ? 'نام باید حداقل ۲ کاراکتر باشد' : 'Name must be at least 2 characters');
     }
     
+    if (!formData.email || !isValidEmail(formData.email)) {
+        errors.push(currentLang === 'fa' ? 'لطفاً یک ایمیل معتبر وارد کنید' : 'Please enter a valid email address');
+    }
+
     // Convert Persian numbers in age field
     const ageValue = convertPersianToLatin(formData.age);
     const ageNumber = parseInt(ageValue);
@@ -162,6 +166,7 @@ async function handleApplicationSubmit(event) {
         const emailData = {
             to_email: 'limitedgeshow@gmail.com',
             from_name: processedData.name,
+            from_email: processedData.email,
             from_age: processedData.age,
             from_gender: processedData.gender,
             from_hometown: processedData.hometown,
@@ -176,6 +181,7 @@ async function handleApplicationSubmit(event) {
 New application received from Limit Edge website:
 
 Name: ${data.name}
+Email: ${data.email}
 Age: ${data.age}
 Gender: ${data.gender}
 Hometown: ${data.hometown}
@@ -242,6 +248,7 @@ async function sendEmail(emailData) {
     return emailjs.send(serviceID, templateID, {
         to_email: emailData.to_email,
         from_name: emailData.from_name,
+        from_email: emailData.from_email,
         from_age: emailData.from_age,
         from_gender: emailData.from_gender,
         from_hometown: emailData.from_hometown,
